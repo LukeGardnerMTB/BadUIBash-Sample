@@ -1,0 +1,63 @@
+
+<form id="resume-box" action="Submission.html">
+  <div id="resume-title">
+      <h1>
+          Submit Your Resum&eacute;
+      </h1>
+  </div>
+  <div id="resume-inputs">
+      <div id="resume-name">
+          <br />
+          <label for="first-name">First Name:</label>
+          <input type="text" id="first-name" name="first-name" />
+          <br />
+          <br />
+          <label for="last-name">Last Name:</label>
+          <input type="text" id="last-name" name="last-name" />
+      </div>
+      <div id="resume-dob">
+          <br />
+          <br />
+          <label for="date">Date of Birth:</label>
+          <input type="datetime-local" id="date" name="date" />
+      </div>
+      <div id="resume-email">
+          <br />
+          <br />
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" />
+      </div>
+      <div id="resume-phone" class="phone-number">
+            <br />
+            <br />
+            <label for="phone">Phone Number:</label>
+            <select>
+                    <option *ngFor="let number of numbersThree" [value]="number">{{number}}</option>
+            </select> - 
+            <select>
+                <option *ngFor="let number of numbersFour" [value]="number">{{number}}</option>
+            </select> - 
+            <select>
+                <option *ngFor="let number of numbersThree" [value]="number">{{number}}</option>
+            </select>
+      </div>
+      <div id="resume-address">
+          <br />
+          <br />
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" />
+      </div>
+      <div id="resume-description">
+          <br />
+          <br />
+          <label for="description">Why should we consider you for this position?</label>
+          <br />
+          <textarea id="description" name="description" cols="30" rows="1" maxlength="500"></textarea>
+      </div>
+      <div id="resume-submit">
+          <br />
+          <br />
+          <input id ="submit" type="submit" value="Submit" (onclick)="refreshPage()"/>
+      </div>
+  </div>
+</form>
